@@ -1,0 +1,92 @@
+.startButton {
+  border-radius: 5px;
+  text-align: center;
+  background-color: transparent;
+  height: 50px;
+  width: 200px;
+  margin-top: 5px;
+  border: 2px solid black;
+}
+.imgVather {
+  float: left;
+  @include margin($all: 20px, $top: 20p, $left: 20px);
+}
+
+.textVather {
+  margin-top: 70px;
+  width: 60%;
+  text-align: center;
+  align-items: center;
+  float: left;
+  border: 3px solid black;
+  color: black;
+}
+.bubble {
+  margin-top: 5px;
+  border: 3px solid white;
+  position: relative;
+  border-radius: 8px 8px 8px 8px;
+  width: 200px;
+}
+.bubble:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  border-top: 20px solid blue;
+  border-top-color: inherit;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+.contenido {
+  margin: auto;
+  width: 60%;
+  height: 60%;
+  background: white;
+  border-radius: 10px;
+}
+.menuJuego {
+  background: rgba(8, 10, 57, 0.8);
+  margin: 20px auto;
+  position: relative;
+  width: 60%;
+}
+
+.div-col {
+  column-count: 2;
+  text-align: center;
+}
+
+#cerrar {
+  display: none;
+}
+
+#cerrar + label {
+  position: fixed;
+  color: #fff;
+  font-size: 25px;
+  z-index: 50;
+  background: rgb(13, 113, 160);
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  right: 150px;
+  top: 150px;
+  cursor: pointer;
+  animation: modal 1s forwards;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+}
+
+#cerrar:checked + label,
+#cerrar:checked ~ .modal {
+  display: none;
+}
+
+@keyframes modal {
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}

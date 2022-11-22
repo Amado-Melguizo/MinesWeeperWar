@@ -1,0 +1,50 @@
+.autor {
+  @include border($size: 3px, $color: white);
+}
+
+.menuAutor {
+  @include color($background: #080a39cc);
+  @include size($width: 60%, $height: 600px);
+  @include margin($all: 20px);
+  position: relative;
+}
+
+.imgCV {
+  float: right;
+  @include margin($right: 10px);
+}
+
+.textAutor1 {
+  @include color;
+  @include size($height: 269px);
+  @include margin($top: 10px, $left: 20px);
+  float: left;
+  @include fontText;
+}
+
+.textAutor2 {
+  @include margin($top: 10px, $left: 50px);
+  @include size($width: 60%);
+  @include border($size: 3px, $color: white);
+  @include color;
+  float: left;
+}
+
+.textAutor3 {
+  @include margin($top: 10px, $left: 20px);
+  @include size($width: 32%);
+  @include border($size: 3px, $color: white);
+  @include color;
+  float: left;
+}
+
+.textAutor4 {
+  @include margin($top: 10px, $left: 5px, $botton: 10px);
+  @include size($width: 32%, $height: 304px);
+  @include border($size: 3px, $color: white);
+  @include color;
+  float: left;
+}
+.textAutor5 {
+  float: left;
+}

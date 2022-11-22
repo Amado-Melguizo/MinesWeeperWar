@@ -1,0 +1,160 @@
+$background: url("../img/fondo.jpg") #1c26ebcc #112958 #080a39cc transparent;
+
+$colormap: (
+  "backImg": nth($background, 1),
+  "backPOP": nth($background, 2),
+  "backHead": nth($background, 3),
+  "backMenu": nth($background, 4),
+  "backTrans": nth($background, 5),
+);
+
+/* Mixins*/
+@mixin size($width: auto, $height: auto) {
+  width: $width;
+  height: $height;
+}
+
+@mixin margin(
+  $all: auto,
+  $top: auto,
+  $left: auto,
+  $right: auto,
+  $botton: auto,
+  $back: auto
+) {
+  margin: $all auto;
+  margin-top: $top;
+  margin-left: $left;
+  margin-right: $right;
+  margin-bottom: $botton;
+  z-index: $back;
+}
+
+@mixin padding($padding) {
+  padding: $padding;
+}
+
+@mixin border($size: none, $radius: 0, $color: white) {
+  border: $size solid;
+  border-radius: $radius;
+  border-color: $color;
+}
+
+@mixin fontText(
+  $align: center,
+  $style: normal,
+  $weight: 400,
+  $size: 16px,
+  $family: verdana
+) {
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  font-family: $family;
+  text-align: $align;
+}
+
+@mixin items($align: center) {
+  align-items: $align;
+}
+@mixin color(
+  $color: white,
+  $background: transparent,
+  $size: auto,
+  $image: none
+) {
+  color: $color;
+  background-color: $background;
+  background-image: $image;
+  background-size: $size;
+}
+
+/* Variables */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 {
+  position: relative;
+  @include fontText(
+    $style: italic,
+    $weight: bold,
+    $size: 5em,
+    $family: "Century"
+  );
+  @include color;
+}
+
+h2 {
+  @include fontText(
+    $style: italic,
+    $weight: bold,
+    $size: 3em,
+    $family: "Century"
+  );
+  @include color;
+}
+
+h3 {
+  text-align: center;
+}
+a {
+  @include color;
+}
+
+table {
+  @include padding($padding: 5px);
+  box-shadow: 0 4px 8px 0 white, 0 6px 10px 0 white;
+  @include fontText;
+  @include border($radius: 12px, $size: 3px);
+  @include color;
+}
+
+tr {
+  @include padding($padding: 10px);
+  @include border($size: 3px);
+  @include color;
+}
+th,
+td {
+  @include padding($padding: 10px);
+  @include border($size: 3px);
+  @include color;
+}
+button {
+  position: absolute;
+  @include margin($left: 350px);
+  @include border($radius: 5px, $color: white);
+  @include fontText;
+  @include size($height: 50px, $width: 200px);
+  @include color($background: transparent);
+}
+#button {
+  @include border($radius: 5px);
+  @include margin($left: 350px);
+  @include size($width: 200%, $height: 50px);
+  @include color;
+  @include fontText;
+  position: absolute;
+  span {
+    :after {
+      content: "\00bb";
+      position: absolute;
+      opacity: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    :hover {
+      span {
+        padding-right: 25px;
+      }
+      span {
+        :after {
+          opacity: 1;
+          right: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "_base_layout.scss";
+
+/** Elementos con position absolute y z-index **/
+
+.menu {
+  @include margin($all: 50px, $top: 175px);
+  position: relative;
+  @include size($width: 60%);
+}
+
+/* Sticky Menu */
+.sticky-menu {
+  @include color($background: #112958);
+  position: -webkit-sticky;
+  position: sticky;
+  @include margin($top: 0px, $back: 10);
+}
+
+//dkjdh
+.sticky-menu section {
+  @include padding($padding: 30px);
+  @include size($width: 100px);
+}
