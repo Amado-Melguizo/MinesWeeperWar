@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscaminas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="Game/jugarBuscaminas.js" defer></script>
+</head>
+  <body>
+    <!-- cambiar a nav y sections -->
+    <nav class="sticky-menu">
+      <section></section>
+    </nav>
+
+    <div class="menuJuego">
+      <h2>¡¡DEFIENDE NUESTRA BASE!!</h2>
+      <div class="div-col">
+        <h2>Log</h2>
+        <h2>Tablero Juego</h2>
+      </div>
+      <div id="idTablero"></div>
+      
+      <input type="checkbox" id="cerrar" />
+      <label for="cerrar" id="btn-cerrar">X</label>
+
+      <div class="modal">
+        <div class="contenido">
+          <div class="imgVather">
+            <img src="img/darth_vader1.jpg" alt="" />
+          </div>
+          <div class="textVather">
+            <h3><u>Darth Vather</u></h3>
+            <h3>¡Ey! ¡soldado rebelde!</h3>
+            <h3>
+              ¡Espero que estés preparado , he llenado una base de minas , vé y
+              comienza el entrenamiento!!
+            </h3>
+
+            <input type="checkbox" id="cerrar" />
+            <button class="startButton" for="cerrar" id="btn-cerrar">
+              <h3 style="color: black">
+                ¡Oh no, se me olvidó el registro a mi escuadrón!
+              </h3>
+            </button>
+
+            <input type="checkbox" id="cerrar" />
+            <button class="startButton" for="cerrar" id="btn-cerrar">
+              <h3 style="color: black">¡Al ataque!</h3>
+            </button>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="menu-element">
+        Pagina diseñada por
+        <a href="autor.html" target="_blank">Amado Melguizo</a>
+      </div>
+    </footer>
+  </body>
+</html>
