@@ -1,4 +1,47 @@
-export function generarTableroJs(tablero, tablero_recursivo, TAM_MAX) {
+// import swal from 'sweetalert2';
+// swal.fire("Hello");
+
+/* Código cronómetro */
+window.onload = cronometrar;
+
+function cronometrar() {
+  min = 0;
+  sec = 0;
+  document.getElementById("ms").innerHTML = "00:00";
+  escribir();
+  id = setInterval(escribir, 1000);
+}
+
+function escribir() {
+  var mAux, sAux;
+  sec++;
+  if (sec > 59) {
+    min++;
+    sec = 0;
+  }
+
+  if (sec < 10) {
+    sAux = "0" + sec;
+  } else {
+    sAux = sec;
+  }
+
+  if (min < 10) {
+    mAux = "0" + min;
+  } else {
+    mAux = min;
+  }
+
+  document.getElementById("ms").innerHTML = mAux + ":" + sAux;
+}
+
+
+/*código buscaminas */
+let tablero = [];
+let tablero_recursivo = [];
+const TAM_MAX = 10;
+
+function generartablero() {
   for (let i = 0; i < TAM_MAX; i++) {
     tablero[i] = new Array(TAM_MAX);
     tablero_recursivo[i] = new Array(TAM_MAX);
@@ -13,7 +56,7 @@ let numeroAletorio = () => {
   return parseInt(10 * Math.random());
 };
 
-export function colocarBombasTableroJS(TAM_MAX, tablero) {
+function colocarbombas() {
   let cont = 0;
   let i = 0;
   let j = 0;
@@ -27,7 +70,8 @@ export function colocarBombasTableroJS(TAM_MAX, tablero) {
   }
 }
 
-export function dibujarTableroHtml(TAM_MAX, tablero) {
+
+function dibujarTablero() {
   // ¿Ubicación de la tabla?
   let tableroHTML = document.getElementById("idTablero");
 
@@ -51,7 +95,6 @@ export function dibujarTableroHtml(TAM_MAX, tablero) {
     tabla.appendChild(fila);
   }
 }
-
 function calcularMinas(e) {
   console.log(e);
   console.log(`Has pulsado la celda ${e.target.id}`);
@@ -68,23 +111,15 @@ function calcularMinas(e) {
   //console.log(`Coordenadas x ${x} , y = ${y}`)
 }
 
-export function asociarEventClick() {
+function asociarEventClick() {
   let celdas = document.querySelectorAll('td[id^="idCelda"]');
 
-  celdas.forEach((e) => e.addEventListener("click", verCelda));
+  celdas.forEach((e) => e.addEventListener("click", mostrarCoordenadas));
 
   celdas.forEach((e) => e.addEventListener("contextmenu", colocarbandera));
 }
 
-export function colocarbandera(event) {
-  event.preventDefault();
-  //event.target.style.background="white";
-  event.target.innerHTML = "🏳️";
-
-  console.log("vas a colocar una bandera");
-}
-
-export function verCelda(e) {
+function mostrarCoordenadas(e) {
   console.log(e);
   console.log(`Has pulsado la celda ${e.target.id}`);
   let id = e.target.id;
@@ -95,11 +130,11 @@ export function verCelda(e) {
     let y = coordenadas[2];
     console.log(x, y);
 
-    liberarRecursivo(tablero, tablero_recursivo, x, y);
+    liberarRecursivo(x, y);
   } else {
     alert("Has perdido");
     onclick = window.location.href = "juego.html";
-
+    
     // Swal.fire({
     //   title: "¡Has perdido!",
     //   imageAlt: "img/loseGame.gif",
@@ -122,11 +157,17 @@ export function verCelda(e) {
   //console.log(e.target.id)
 }
 
-function liberarRecursivo(tablero, tablero_recursivo, x, y) {
+function colocarbandera(event) {
+  event.preventDefault();
+  //event.target.style.background="white";
+  event.target.innerHTML = "🏳️";
+
+  console.log("vas a colocar una bandera");
+}
+
+function liberarRecursivo(x, y) {
   x = parseInt(x);
   y = parseInt(y);
-  console.log(x, y);
-  //let cercanos = [[x,y-1] , [x-1,y-1] , [x-1 , y] , [x-1 , y+1] , [x , y+1] , [x+1 , y+1] , [x+1 , y ] , [x+1 , y-1] ]
   let cercanos = [
     [x, y - 1],
     [x - 1, y],
@@ -154,3 +195,8 @@ function liberarRecursivo(tablero, tablero_recursivo, x, y) {
     }
   }
 }
+
+generartablero();
+colocarbombas();
+dibujarTablero();
+asociarEventClick();
