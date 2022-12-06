@@ -1,3 +1,7 @@
+.centralButton{
+  @include margin($left:350px)
+}
+
 .button span {
   cursor: pointer;
   display: inline-block;
@@ -31,6 +35,9 @@
 body {
   @include margin($all: 0px);
   @include color($image: url("../img/fondo.jpg"), $size: cover);
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .modal {

@@ -7,7 +7,7 @@
   float: left;
 }
 .tableForm {
-  @include margin($left: 370px);
+  @include margin($left: 60px);
 }
 .menuForm {
   @include margin($top: 41px);

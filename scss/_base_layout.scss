@@ -1,5 +1,11 @@
+//// @access public
+//// @author Amado Melguizo Martinez
+
+/// @group Colores
 $background: url("../img/fondo.jpg") #1c26ebcc #112958 #080a39cc transparent;
 
+
+/// @prop {Type} colorMap -- Mapa de colores de backgrounds
 $colormap: (
   "backImg": nth($background, 1),
   "backPOP": nth($background, 2),
@@ -8,11 +14,24 @@ $colormap: (
   "backTrans": nth($background, 5),
 );
 
-/* Mixins*/
+
+
+/// Mixin para el tamaño de los elementos
+/// @parameter {integer} $width [auto] -- Tamaño del ancho.
+/// @parameter {integer} $height [auto] -- Tamaño del alto.
+
 @mixin size($width: auto, $height: auto) {
   width: $width;
   height: $height;
 }
+
+/// Mixin para el tamaño del margen de los elementos
+/// @parameter {integer} $all [auto] -- Margen general.
+/// @parameter {integer} $top [auto] -- Margen superior.
+/// @parameter {integer} $left [auto] -- Margen izquierdo.
+/// @parameter {integer} $right [auto] -- Margen derecho.
+/// @parameter {integer} $botton [auto] -- Margen inferior.
+/// @parameter {integer} $back [auto] -- Profundidad.
 
 @mixin margin(
   $all: auto,
@@ -30,15 +49,30 @@ $colormap: (
   z-index: $back;
 }
 
+/// Mixin para el padding de los elementos
+/// @parameter {integer} $padding [auto] -- Tamaño padding.
+
 @mixin padding($padding) {
   padding: $padding;
 }
+
+/// Mixin para el borde de los elementos
+/// @parameter {integer} $size [none] -- Tamaño del borde.
+/// @parameter {integer} $border-radius [0] -- Radio del borde.
+/// @parameter {integer} $border-color [white] -- Color del borde.
 
 @mixin border($size: none, $radius: 0, $color: white) {
   border: $size solid;
   border-radius: $radius;
   border-color: $color;
 }
+
+/// Mixin para el texto de los elementos.
+/// @parameter {string} $align [center] -- Posicion del texto.
+/// @parameter {string} $style [normal] -- Estilo del texto.
+/// @parameter {integer} $weight [400] -- Ancho del texto.
+/// @parameter {integer} $size [16px] -- Tamaño del texto.
+/// @parameter {string} $family [verdana] -- Fuente del texto.
 
 @mixin fontText(
   $align: center,
@@ -57,6 +91,7 @@ $colormap: (
 @mixin items($align: center) {
   align-items: $align;
 }
+
 @mixin color(
   $color: white,
   $background: transparent,
@@ -73,6 +108,8 @@ $colormap: (
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🌌</text></svg>"),
+    auto;
 }
 
 h1 {
@@ -90,15 +127,18 @@ h2 {
   @include fontText(
     $style: italic,
     $weight: bold,
-    $size: 3em,
+    $size: 2em,
     $family: "Century"
   );
   @include color;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 h3 {
   text-align: center;
 }
+
 a {
   @include color;
 }
@@ -109,6 +149,9 @@ table {
   @include fontText;
   @include border($radius: 12px, $size: 3px);
   @include color;
+  float: left;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
 tr {
@@ -116,20 +159,23 @@ tr {
   @include border($size: 3px);
   @include color;
 }
+
 th,
 td {
   @include padding($padding: 10px);
   @include border($size: 3px);
   @include color;
 }
+
 button {
   position: absolute;
-  @include margin($left: 350px);
   @include border($radius: 5px, $color: white);
   @include fontText;
   @include size($height: 50px, $width: 200px);
   @include color($background: transparent);
+  margin-left: 350px;
 }
+
 #button {
   @include border($radius: 5px);
   @include margin($left: 350px);
@@ -137,6 +183,7 @@ button {
   @include color;
   @include fontText;
   position: absolute;
+
   span {
     :after {
       content: "\00bb";
@@ -145,10 +192,12 @@ button {
       right: -20px;
       transition: 0.5s;
     }
+
     :hover {
       span {
         padding-right: 25px;
       }
+
       span {
         :after {
           opacity: 1;
