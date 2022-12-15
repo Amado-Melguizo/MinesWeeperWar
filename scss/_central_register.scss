@@ -2,7 +2,6 @@
   @include margin($botton: 10px, $left: 60px, $top: 25px);
   @include size($width: 45%);
   @include border($size: 3px, $color: white);
-  @include color;
   @include fontText;
   float: left;
 }

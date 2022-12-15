@@ -1,0 +1,40 @@
+.menuRank {
+  background: rgba(8, 10, 57, 0.8);
+  margin: 20px auto;
+  position: relative;
+  width: 70%;
+  height: 500px;
+}
+
+.textRank {
+    @include margin($top: 10px, $left: 210px);
+    @include size($width: 60%);
+    @include border($size: 3px, $color: white);
+}
+
+.tableRank {
+    @include padding($padding: 5px);
+    box-shadow: 0 4px 8px 0 white, 0 6px 10px 0 white;
+    @include fontText;
+    @include border($radius: 12px, $size: 3px);
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+
+.buttonRank{
+    bottom: 10px;
+    margin-left: 125px;
+}
+
+.div-col-rank {
+  column-count: 3;
+}
+
+.img1 {
+  float: left;
+  
+}
+.img2 {
+  float: right;
+}

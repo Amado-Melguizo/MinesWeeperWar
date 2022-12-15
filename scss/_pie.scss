@@ -1,12 +1,10 @@
 footer {
   @include color($background: #112958);
   @include size($width: 100%, $height: 50px);
-  @include items;
   position: fixed;
   bottom: 0px;
 }
 .menu-element {
   @include margin($top:20px);
   @include fontText;
-  @include color;
 }

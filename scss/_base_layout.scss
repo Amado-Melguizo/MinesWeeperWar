@@ -4,7 +4,6 @@
 /// @group Colores
 $background: url("../img/fondo.jpg") #1c26ebcc #112958 #080a39cc transparent;
 
-
 /// @prop {Type} colorMap -- Mapa de colores de backgrounds
 $colormap: (
   "backImg": nth($background, 1),
@@ -13,8 +12,6 @@ $colormap: (
   "backMenu": nth($background, 4),
   "backTrans": nth($background, 5),
 );
-
-
 
 /// Mixin para el tamaño de los elementos
 /// @parameter {integer} $width [auto] -- Tamaño del ancho.
@@ -88,9 +85,18 @@ $colormap: (
   text-align: $align;
 }
 
+/// Mixin para centrar los elementos.
+/// @parameter {string} $align [center] -- Posicion de los items.
+
 @mixin items($align: center) {
   align-items: $align;
 }
+
+/// Mixin para el color de los elementos.
+/// @parameter {string} $color [white] -- Color del texto.
+/// @parameter {string} $background [transparent] -- Fondo del elemento.
+/// @parameter {string} $size [auto] -- Tamaño del fondo del elemento.
+/// @parameter {string} $image [none] -- Imagen de fondo del elemento.
 
 @mixin color(
   $color: white,
@@ -120,7 +126,6 @@ h1 {
     $size: 5em,
     $family: "Century"
   );
-  @include color;
 }
 
 h2 {
@@ -130,7 +135,6 @@ h2 {
     $size: 2em,
     $family: "Century"
   );
-  @include color;
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -140,31 +144,32 @@ h3 {
 }
 
 a {
-  @include color;
+  color: white;
 }
 
 table {
   @include padding($padding: 5px);
   box-shadow: 0 4px 8px 0 white, 0 6px 10px 0 white;
-  @include fontText;
   @include border($radius: 12px, $size: 3px);
-  @include color;
   float: left;
   margin-left: 20px;
   margin-top: 10px;
 }
 
 tr {
-  @include padding($padding: 10px);
+  @include padding($padding: 15px);
   @include border($size: 3px);
-  @include color;
 }
 
 th,
 td {
-  @include padding($padding: 10px);
+  @include padding($padding: 15px);
   @include border($size: 3px);
-  @include color;
+}
+
+select {
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 button {
@@ -180,8 +185,6 @@ button {
   @include border($radius: 5px);
   @include margin($left: 350px);
   @include size($width: 200%, $height: 50px);
-  @include color;
-  @include fontText;
   position: absolute;
 
   span {
