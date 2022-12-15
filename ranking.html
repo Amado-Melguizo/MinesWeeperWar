@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Posicionando Elementos</title>
+    <title>Minesweeper War</title>
 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
@@ -16,95 +16,44 @@
     <nav class="sticky-menu">
       <section></section>
     </nav>
-    <div class="menuAutor">
-      <div class="textAutor1">
-        <div class="autor">
-          <h3><u>Amado Melguizo Martinez</u></h3>
+
+    <div class="menuRank">
+      <div class="textRank" id="idResultado">
+        <h3>RANKING DE JUGADORES</h3>
+      </div>
+
+      <div class="div-col-rank">
+        <div class="img1">
+          <img src="img/duelo_rank_left.png" alt="" />
         </div>
-        <div class="bubble">
-          <h3><u>G. Griverious</u></h3>
-          <h3>¡Ey!¡Conoce al autor!</h3>
+
+        <table class="tableRank" id="idTablaResultados">
+          <thead>
+            <tr>
+              <th>Jugador</th>
+              <th>Movimientos</th>
+              <th>Tiempo</th>
+              <th>Puntuacion</th>
+            </tr>
+          </thead>
+          <tbody id="idEstadisticas"></tbody>
+          <tr>
+            <td>amado</td>
+            <td>45</td>
+            <td>1:35</td>
+            <td>500</td>
+          </tr>
+        </table>
+        <button class="buttonRank"
+        onclick="window.location.href='juego.html'"
+      >
+        <h3 style="margin-top: 0px; margin-bottom: 0px">
+          ¿Te atreves a jugar de nuevo?
+        </h3>
+      </button>
+        <div class="img2">
+          <img src="img/duelo_rank_right.png" alt="" />
         </div>
-      </div>
-
-      <div class="textAutor2">
-        <h3 style="text-align: center">
-          <u>Redes Sociales para contactarme</u>
-        </h3>
-        <div style="float: left">
-          <h3>
-            - Gmail:
-            <a href="mailto:amado.melgizo@gmail.com" target="_blank"
-              >amado-melgizo@gmail.com</a
-            >
-          </h3>
-          <h3>
-            - Github:
-            <a href="https://github.com/Amado-Melguizo" target="_blank"
-              >amado-melguizo</a
-            >
-          </h3>
-        </div>
-        <div></div>
-      </div>
-      <div>
-        <img src="img/duelo_rank.png" alt="" />
-      </div>
-      <div class="textAutor3">
-        <h3><u>Sobre mi </u></h3>
-        <h3>
-          🖥️ I’m currently working on ScholarShip Front-End & Back End
-          Developer.
-        </h3>
-        <h3>
-          🌱 I’m currently learning JavaScript , Svelte and little Excel in my
-          free time.
-        </h3>
-        <h3>
-          🍜 Fun Fact: I'm a sportsman with hunger for travel and a gamer.
-        </h3>
-      </div>
-      <div class="textAutor4">
-        <h3 style="text-align: center"><u>Proyectos creados</u></h3>
-        <h3>
-          - GeneradorNominas:
-          <a
-            href="https://github.com/Amado-Melguizo/GeneradorNominas
-        "
-            target="_blank"
-            >Enlace Github</a
-          >
-        </h3>
-
-        <h3>
-          - Web_luthier_PHP:
-          <a
-            href="https://github.com/Amado-Melguizo/Web_luthier_PHP
-        "
-            target="_blank"
-            >Enlace Github</a
-          >
-        </h3>
-
-        <h3>
-          - ProyectDashboard:
-          <a
-            href="https://github.com/Amado-Melguizo/ProyectDashboard
-          "
-            target="_blank"
-            >Enlace Github</a
-          >
-        </h3>
-
-        <h3>
-          - ProyectDashboardApi:
-          <a
-            href="https://github.com/Amado-Melguizo/ProyectDashboardApi
-          "
-            target="_blank"
-            >Enlace Github</a
-          >
-        </h3>
       </div>
     </div>
 
