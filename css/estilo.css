@@ -10,9 +10,10 @@
   position: sticky;
   top: 0px;
   z-index: 10;
+  padding: 30px;
 }
 
-.div-col{
+.div-col {
   column-count: 2;
   text-align: center;
 }
@@ -33,6 +34,8 @@ td {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background-image: url("../img/fondo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -59,10 +62,7 @@ h2 {
 
 /** Elementos con position absolute y z-index **/
 .menu {
-  margin: 50px auto;
-  margin-top: 175px;
   position: relative;
-  width: 60%;
 }
 
 .menuJuego {
@@ -108,16 +108,14 @@ button {
   color: white;
 }
 
-.button span {
+.buttonIndex span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-
-
-.button span:after {
+.buttonIndex span:after {
   content: "\00bb";
   position: absolute;
   opacity: 0;
@@ -125,11 +123,11 @@ button {
   transition: 0.5s;
 }
 
-.button:hover span {
+.buttonIndex:hover span {
   padding-right: 25px;
 }
 
-.button:hover span:after {
+.buttonIndex:hover span:after {
   opacity: 1;
   right: 0;
 }
@@ -190,7 +188,7 @@ button {
   text-align: center;
 }
 
-.autor{
+.autor {
   border: 3px solid white;
 }
 .bubble {
@@ -203,11 +201,11 @@ button {
 .bubble:after {
   content: "";
   position: absolute;
- left: 20px;
- border-top: 20px solid blue;
- border-top-color: inherit;
- border-left: 20px solid transparent;
- border-right: 20px solid transparent;
+  left: 20px;
+  border-top: 20px solid blue;
+  border-top-color: inherit;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
 }
 .textAutor1 {
   margin-top: 10px;
@@ -247,7 +245,7 @@ button {
   border: 3px solid white;
   color: white;
 }
-.textAutor5{
+.textAutor5 {
   float: left;
 }
 #cerrar {
@@ -299,11 +297,6 @@ footer {
   text-align: center;
   color: white;
 }
-.sticky-menu section {
-  padding: 30px;
-  width: 100px;
-}
-
 
 
 /* ///////////////////////////////// */
