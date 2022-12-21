@@ -1,0 +1,20 @@
+/* Codigo del login.html & register.html - _central_form.scss */
+
+.textTrooper {
+  width: 45%;
+  border: 3px solid;
+  border-radius: 0;
+  border-color: white;
+}
+
+.menuForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  @include size($width: 60%, $height: 450px);
+  @include color($background: #080a39cc);
+  font-family: verdana;
+  text-align: center;
+}

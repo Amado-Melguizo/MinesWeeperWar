@@ -1,7 +1,23 @@
-.centralButton{
-  @include margin($left:350px)
+/* Codigo del index.html - _central.scss */
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  margin: 0px;
+  @include color($image: url("../img/fondo.jpg"), $size: cover);
 }
 
+.central {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+// Funcionalidades del botón
 .button span {
   cursor: pointer;
   display: inline-block;
@@ -26,28 +42,30 @@
   right: 0;
 }
 
-.menu {
-  @include margin($all: 50px, $top: 175px);
-  @include size($width: 60%);
-  position: relative;
-}
-
-body {
-  @include margin($all: 0px);
-  @include color($image: url("../img/fondo.jpg"), $size: cover);
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.modal {
-  @include size($height: 100vh,$width:100%);
-  background: rgba(28, 38, 235, 0.8);
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  animation: modal 1s forwards;
-  visibility: hidden;
-  opacity: 0;
-}
+//////////////////////////////////////
+/*.button {
+  span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    :after {
+      content: "\00bb";
+      position: absolute;
+      opacity: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    :hover {
+      span {
+        padding-right: 25px;
+      }
+      span {
+        :after {
+          opacity: 1;
+          right: 0;
+        }
+      }
+    }
+  }
+}*/

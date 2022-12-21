@@ -114,6 +114,7 @@ $colormap: (
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  /* Variable para cambiar el icono del ratón */
   cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🌌</text></svg>"),
     auto;
 }
@@ -135,15 +136,14 @@ h2 {
     $size: 2em,
     $family: "Century"
   );
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin: 5px;
 }
 
 h3 {
   text-align: center;
 }
 
-a {
+.a {
   color: white;
 }
 
@@ -151,14 +151,6 @@ table {
   @include padding($padding: 5px);
   box-shadow: 0 4px 8px 0 white, 0 6px 10px 0 white;
   @include border($radius: 12px, $size: 3px);
-  float: left;
-  margin-left: 20px;
-  margin-top: 10px;
-}
-
-tr {
-  @include padding($padding: 15px);
-  @include border($size: 3px);
 }
 
 th,
@@ -173,40 +165,8 @@ select {
 }
 
 button {
-  position: absolute;
   @include border($radius: 5px, $color: white);
   @include fontText;
   @include size($height: 50px, $width: 200px);
   @include color($background: transparent);
-  margin-left: 350px;
-}
-
-#button {
-  @include border($radius: 5px);
-  @include margin($left: 350px);
-  @include size($width: 200%, $height: 50px);
-  position: absolute;
-
-  span {
-    :after {
-      content: "\00bb";
-      position: absolute;
-      opacity: 0;
-      right: -20px;
-      transition: 0.5s;
-    }
-
-    :hover {
-      span {
-        padding-right: 25px;
-      }
-
-      span {
-        :after {
-          opacity: 1;
-          right: 0;
-        }
-      }
-    }
-  }
 }

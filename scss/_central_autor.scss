@@ -1,47 +1,50 @@
-.autor {
-  @include border($size: 3px, $color: white);
-}
+/* Codigo del autor.html - _central_autor.scss */
 
 .menuAutor {
-  @include color($background: #080a39cc);
-  @include size($width: 60%, $height: 600px);
-  @include margin($all: 20px);
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: #080a39cc;
+  width: 75%;
 }
 
-.imgCV {
-  float: right;
-  @include margin($right: 10px);
+.bubble {
+  @include margin($top: 10px, $left: 5px, $right: 5px);
+  @include border($size: 3px, $color: white, $radius: 8px);
+  position: relative;
+  border-radius: 8px;
+}
+
+
+.bubble:after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  border-top: 20px solid;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+.autor {
+  display: flex;
+  flex-direction: column;
+  @include border($size: 3px, $color: white, $radius: 8px);
+  @include margin($top: 10px, $left: 5px, $right: 5px);
+  height: 60%;
+}
+
+.autorImg{
+  padding: 5px;
 }
 
 .textAutor1 {
-  @include size($height: 269px);
-  @include margin($top: 10px, $left: 20px);
-  float: left;
-  @include fontText;
+  @include margin($top: 10px, $left: 5px, $right: 5px);
+  @include size($width: 32%, $height: 60%);
+  @include border($size: 3px, $color: white, $radius: 8px);
 }
 
 .textAutor2 {
-  @include margin($top: 10px, $left: 50px);
-  @include size($width: 60%);
-  @include border($size: 3px, $color: white);
-  float: left;
-}
-
-.textAutor3 {
-  @include margin($top: 10px, $left: 20px);
-  @include size($width: 32%);
-  @include border($size: 3px, $color: white);
-  float: left;
-}
-
-.textAutor4 {
-  @include margin($top: 10px, $left: 5px, $botton: 10px);
-  @include size($width: 32%, $height: 304px);
-  @include border($size: 3px, $color: white);
-  float: left;
-}
-
-.textAutor5 {
-  float: left;
+  @include margin($top: 10px, $left: 5px, $right: 5px);
+  @include size($width: 32%, $height: 60%);
+  @include border($size: 3px, $color: white, $radius: 8px);
 }
