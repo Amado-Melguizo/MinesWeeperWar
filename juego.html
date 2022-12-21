@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Minesweeper War</title>
-
+    <link
+      href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
     <script src="app/juego.js" defer></script>
@@ -18,9 +21,7 @@
 
   <body>
     <!-- cambiar a nav y sections -->
-    <nav class="sticky-menu">
-      <section></section>
-    </nav>
+    <nav></nav>
     <!-- Titulo juego -->
     <div class="menuJuego">
       <h2>¡¡DEFIENDE NUESTRA BASE!!</h2>
@@ -28,88 +29,109 @@
       <div class="div-col">
         <h2><u>Tablero Juego</u></h2>
         <h2><u>Marcador</u></h2>
-      </div>
 
-      <div id="idTablero"></div>
-      <div class="log">
-        <h3><u>Nombre del soldado:</u></h3>
-        <div class="cronometro">
-          <p>Amado</p>
-        </div>
-
-        <h3><u>Tiempo de juego</u></h3>
-        <div class="cronometro">
-          <div id="ms"></div>
-        </div>
-
-        <h3>
-          <u>Número de banderas:</u>
-        </h3>
-        <div class="cronometro">
-          <p id="banderas"></p>
-          
-        </div>
-
-        <h3><u>Movimientos:</u></h3>
-        <div class="cronometro">
-          <p id="clicks">0</p>
-        </div>
-      </div>
-      <input type="checkbox" id="cerrar" />
-
-      <div class="modal">
-        <div class="contenido">
-          <div class="imgVather">
-            <img src="img/darth_vader1.jpg" alt="" />
+        <div id="idTablero"></div>
+        <div class="log">
+          <h3><u>Nombre del soldado:</u></h3>
+          <div class="cronometro">
+            <p>Amado</p>
           </div>
-          <div class="textVather">
-            <h2 style="color: black">
-              <u>Darth Vather</u>
-            </h2>
-            <h2 style="color: black">¡Ey! ¡soldado rebelde!</h2>
-            <h2 style="color: black">
-              ¡Espero que estés preparado , he llenado una base de minas , vé y
-              comienza el entrenamiento!!
-            </h2>
-            <button class="buttonGame">
-              <label for="cerrar" id="btn-cerrar">
-                <h3 style="color: black; margin-top: 0px">
-                  ¡Pulse para el combate!
-                </h3>
-              </label>
-            </button>
 
-            <button class="levelGame">
-              <h3 style="color: black; margin-top: 0px">
-                ¿Que nivel eres capaz?
-              </h3>
-              <select id="level" name="level">
-                <option value="level1">Nivel Cadete</option>
-                <option value="level2">Nivel Sargento</option>
-                <option value="level3">Nivel Lord Vather</option>
-              </select>
-            </button>
+          <h3><u>Tiempo de juego</u></h3>
+          <div class="cronometro">
+            <div id="ms"></div>
+          </div>
 
-            <button
-              class="buttonLogin"
-              onclick="window.location.href='login.html'"
-            >
-              <h3 style="color: black; margin-top: 0px; margin-bottom: 0px">
-                ¿Estas registrado en el equipo? ¿No?
-              </h3>
-              <h3 style="color: black; margin-top: 0px; margin-bottom: 0px">
-                ¡Pulse para registrarse!
-              </h3>
-            </button>
+          <h3>
+            <u>Número de banderas:</u>
+          </h3>
+          <div class="cronometro">
+            <p id="banderas"></p>
           </div>
         </div>
       </div>
     </div>
-    <footer>
-      <div class="menu-element">
-        Pagina diseñada por
-        <a href="autor.html" target="_blank">Amado Melguizo</a>
+    <input type="checkbox" id="cerrar" />
+
+    <div class="modal">
+      <div class="contenido">
+        <div class="imgVather">
+          <img src="img/darth_vader.jpg" alt="" />
+        </div>
+        <div class="textVather">
+          <h2 style="color: black">
+            <u>Darth Vather</u>
+          </h2>
+          <h2 style="color: black">¡Ey! ¡soldado rebelde!</h2>
+          <h2 style="color: black">
+            ¡Espero que estés preparado , he llenado una base de minas , vé y
+            comienza el entrenamiento!!
+          </h2>
+        </div>
+
+        <button class="buttonGame">
+          <label for="cerrar" id="btn-cerrar">
+            <h3 style="color: black; margin-top: 0px">
+              ¡Pulse para el combate!
+            </h3>
+          </label>
+        </button>
+
+        <button class="levelGame">
+          <h3 style="color: black; margin-top: 0px">¿Que nivel eres capaz?</h3>
+          <select id="level" name="level">
+            <option value="level1">Nivel Cadete</option>
+            <option value="level2">Nivel Sargento</option>
+            <option value="level3">Nivel Lord Vather</option>
+          </select>
+        </button>
+
+        <button class="buttonLogin" onclick="window.location.href='login.html'">
+          <h3 style="color: black; margin-top: 0px; margin-bottom: 0px">
+            ¿Estas registrado en el equipo? ¿No?
+          </h3>
+          <h3 style="color: black; margin-top: 0px; margin-bottom: 0px">
+            ¡Pulse para registrarse!
+          </h3>
+        </button>
       </div>
+    </div>
+    <footer>
+      <ul class="social-icons">
+        <a
+          class="linkedin"
+          href="https://linkedin.com/in/amado-melguizo-martinez"
+          title="follow us on Linkedin"
+          ><i class="fa fa-linkedin"> Linkedin</i></a
+        >
+
+        <a
+          class="gmail"
+          href="mailto:amado.melgizo@gmail.com"
+          title="follow us on Gmail"
+          ><i class="fa fa-envelope"> Contacto</i></a
+        >
+      </ul>
+
+      <div>
+        Pagina diseñada por
+        <a class="a" href="autor.html" target="_blank">Amado Melguizo</a>
+      </div>
+      <ul class="social-icons">
+        <a
+          class="cv"
+          href="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/50b6e163-7048-4a11-be2d-a2cfc543a4c1?view=html"
+          title="follow us my CV/curriculum"
+          ><i class="fa fa-address-card"> Mi CV</i></a
+        >
+
+        <a
+          class="github"
+          href="https://github.com/Amado-Melguizo"
+          title="follow us on Github"
+          ><i class="fa fa-github"> Github</i></a
+        >
+      </ul>
     </footer>
   </body>
 </html>
