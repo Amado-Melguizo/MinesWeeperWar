@@ -1,0 +1,12 @@
+
+index.html
+
+¿porque los botones no se centran del todo?
+
+¿porque la foto sale varias veces?
+
+¿porque el div del medio , no se le aplica el 100%?
+
+¿porque hay un espacio entre el body el footer sin nada?
+
+Ver el enlazado del boton.
