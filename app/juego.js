@@ -122,7 +122,6 @@ var clicks = 0;
 
 function mostrarCoordenadas(e) {
   clicks += 1;
-  document.getElementById("clicks").innerHTML = clicks;
 
   console.log(e);
   console.log(`Has pulsado la celda ${e.target.id}`);
