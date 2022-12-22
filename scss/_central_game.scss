@@ -87,12 +87,6 @@
     opacity: 1;
   }
 }
-.imgVather {
-  float: left;
-  @include margin($all: 20px, $top: 20p, $left: 20px);
-}
-
-
 
 .div-col {
   column-count: 2;

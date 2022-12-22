@@ -12,6 +12,7 @@
   h3 {
     font-size: 15px;
   }
+  /*Pagina autor*/
   .griverious {
     display: none;
   }
@@ -33,14 +34,17 @@
     width: 95%;
   }
 
+  /*Pagina Login*/
   .imgTrooper {
     max-width: 95%;
   }
+
   .menuForm {
     flex-direction: row;
-    width: 65%;
+    width: 100%;
     height: 90%;
   }
+
   .trooper {
     display: flex;
     align-items: center;
@@ -53,5 +57,55 @@
   tr {
     display: flex;
     flex-direction: column;
+  }
+
+  .textTrooper {
+    width: 63%;
+  }
+
+  /*Pagina juego*/
+  h2 {
+    font-size: 1em;
+  }
+
+  .imgVather {
+    max-width: 50%;
+  }
+
+  .textVather {
+    width: 50%;
+  }
+
+  .contenido {
+    width: 95%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .botones {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .buttonGame {
+    height: 58%;
+  }
+
+  .buttonLogin {
+    order: 1;
+    height: auto;
+  }
+
+  .menuJuego {
+    width: auto;
+  }
+
+  .tr {
+    flex-direction: row;
+  }
+  .log{
+    width: 55%;
+  }
+  #col{
   }
 }

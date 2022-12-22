@@ -11,7 +11,9 @@ footer {
   bottom: 0px;
   @include fontText;
 }
-
+.footerGame{
+  position: static;
+}
 
 
 .social-icons a {
