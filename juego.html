@@ -68,32 +68,36 @@
             comienza el entrenamiento!!
           </h2>
         </div>
+        <div class="botones">
+          <button class="buttonGame">
+            <label for="cerrar" id="btn-cerrar">
+              <h3 style="color: black; margin-top: 0px">¡Pulse para jugar!</h3>
+            </label>
+          </button>
 
-        <button class="buttonGame">
-          <label for="cerrar" id="btn-cerrar">
+          <button class="levelGame">
             <h3 style="color: black; margin-top: 0px">
-              ¡Pulse para el combate!
+              ¿Que nivel eres capaz?
             </h3>
-          </label>
-        </button>
+            <select id="level" name="level">
+              <option value="level1">Nivel Cadete</option>
+              <option value="level2">Nivel Sargento</option>
+              <option value="level3">Nivel Lord Vather</option>
+            </select>
+          </button>
 
-        <button class="levelGame">
-          <h3 style="color: black; margin-top: 0px">¿Que nivel eres capaz?</h3>
-          <select id="level" name="level">
-            <option value="level1">Nivel Cadete</option>
-            <option value="level2">Nivel Sargento</option>
-            <option value="level3">Nivel Lord Vather</option>
-          </select>
-        </button>
-
-        <button class="buttonLogin" onclick="window.location.href='login.html'">
-          <h3 style="color: black; margin-top: 0px; margin-bottom: 0px">
-            ¿Estas registrado en el equipo? ¿No?
-          </h3>
-          <h3 style="color: black; margin-top: 0px; margin-bottom: 0px">
-            ¡Pulse para registrarse!
-          </h3>
-        </button>
+          <button
+            class="buttonLogin"
+            onclick="window.location.href='login.html'"
+          >
+            <h3 style="color: black; margin-top: 0px; margin-bottom: 0px">
+              ¿Estas registrado en el equipo? ¿No?
+            </h3>
+            <h3 style="color: black; margin-top: 0px; margin-bottom: 0px">
+              ¡Pulse para registrarse!
+            </h3>
+          </button>
+        </div>
       </div>
     </div>
     <footer>
