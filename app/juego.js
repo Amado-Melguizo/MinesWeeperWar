@@ -100,8 +100,10 @@ function dibujarTablero() {
   // Dibujamos las filas
   for (let i = 0; i < TAM_MAX; i++) {
     let fila = document.createElement("tr");
+    fila.setAttribute("class","tr")
     for (let j = 0; j < TAM_MAX; j++) {
       let celda = document.createElement("td");
+
       celda.innerHTML = "";
       celda.id = `idCelda_${i}_${j}`;
       fila.appendChild(celda);
