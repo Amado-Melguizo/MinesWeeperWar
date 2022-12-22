@@ -35,10 +35,26 @@ function escribir() {
   document.getElementById("ms").innerHTML = mAux + ":" + sAux;
 }
 
+let select = document.querySelector("select");
+
 /*código buscaminas */
+
 let tablero = [];
 let tablero_recursivo = [];
+
+let option = select.value;
+
 const TAM_MAX = 10;
+// switch (option) {
+//   case "level1":
+//     return (TAM_MAX = 20);
+//   case "level2":
+//     return (TAM_MAX = 30);
+//   case "level3":
+//     return (TAM_MAX = 40);
+//   default:
+//     return (TAM_MAX = 10);
+// }
 
 function generartablero() {
   for (let i = 0; i < TAM_MAX; i++) {
@@ -191,7 +207,6 @@ function liberarRecursivo(x, y) {
     }
   }
 }
-
 generartablero();
 colocarbombas();
 dibujarTablero();
