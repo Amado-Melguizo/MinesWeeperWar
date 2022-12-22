@@ -192,6 +192,14 @@ body {
   color: black;
 }
 
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 40%;
+  width: 60%;
+}
+
 .buttonLogin {
   border-radius: 5px;
   height: 100px;
@@ -200,6 +208,7 @@ body {
 }
 
 .buttonGame {
+  order: 1;
   border-radius: 5px;
   height: 50px;
   width: 200px;
@@ -363,6 +372,10 @@ body {
 }
 
 /* Codigo del login.html & register.html - _central_form.scss */
+.trooper {
+  display: contents;
+}
+
 .textTrooper {
   width: 45%;
   border: 3px solid;
@@ -376,8 +389,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  height: 450px;
+  width: 55%;
+  height: 60%;
   color: white;
   background-color: rgba(8, 10, 57, 0.8);
   background-image: none;
@@ -490,6 +503,55 @@ footer {
 
 .social-icons a.github:hover {
   background-color: black;
+}
+
+@media (max-width: 768px) {
+  footer {
+    height: 10%;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3em;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  .griverious {
+    display: none;
+  }
+  .autor {
+    flex-direction: row;
+    align-items: center;
+  }
+  .menuAutor {
+    flex-direction: column;
+  }
+  .textAutor1 {
+    width: 95%;
+  }
+  .textAutor2 {
+    width: 95%;
+  }
+  .imgTrooper {
+    max-width: 95%;
+  }
+  .menuForm {
+    flex-direction: row;
+    width: 65%;
+    height: 90%;
+  }
+  .trooper {
+    display: flex;
+    align-items: center;
+  }
+  table {
+    margin-top: 10px;
+  }
+  tr {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
