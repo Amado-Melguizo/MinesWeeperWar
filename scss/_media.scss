@@ -69,7 +69,7 @@
   }
 
   .imgVather {
-    max-width: 50%;
+    max-width: 45%;
   }
 
   .textVather {
@@ -97,15 +97,28 @@
   }
 
   .menuJuego {
-    width: auto;
+    width: 95%;
+  }
+
+  .div-col{
+    flex-direction: column;
+    align-items: center;
   }
 
   .tr {
     flex-direction: row;
   }
+
   .log{
+    order: 4;
     width: 55%;
   }
-  #col{
+
+
+  .titleTablero{
+  }
+
+  .tituloLog{
+    order: 2;
   }
 }
