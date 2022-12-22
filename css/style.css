@@ -556,7 +556,7 @@ footer {
     font-size: 1em;
   }
   .imgVather {
-    max-width: 50%;
+    max-width: 45%;
   }
   .textVather {
     width: 50%;
@@ -578,13 +578,21 @@ footer {
     height: auto;
   }
   .menuJuego {
-    width: auto;
+    width: 95%;
+  }
+  .div-col {
+    flex-direction: column;
+    align-items: center;
   }
   .tr {
     flex-direction: row;
   }
   .log {
+    order: 4;
     width: 55%;
+  }
+  .tituloLog {
+    order: 2;
   }
 }
 
