@@ -245,16 +245,6 @@ body {
     opacity: 1;
   }
 }
-.imgVather {
-  float: left;
-  margin: 20px auto;
-  margin-top: 20p;
-  margin-left: 20px;
-  margin-right: auto;
-  margin-bottom: auto;
-  z-index: auto;
-}
-
 .div-col {
   column-count: 2;
   display: flex;
@@ -471,6 +461,10 @@ footer {
   text-align: center;
 }
 
+.footerGame {
+  position: static;
+}
+
 .social-icons a {
   width: 150px;
   height: 45px;
@@ -517,6 +511,7 @@ footer {
   h3 {
     font-size: 15px;
   }
+  /*Pagina autor*/
   .griverious {
     display: none;
   }
@@ -533,6 +528,7 @@ footer {
   .textAutor2 {
     width: 95%;
   }
+  /*Pagina Login*/
   .imgTrooper {
     max-width: 95%;
   }
@@ -552,8 +548,43 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  .textTrooper{
-    width:63%;
+  .textTrooper {
+    width: 63%;
+  }
+  /*Pagina juego*/
+  h2 {
+    font-size: 1em;
+  }
+  .imgVather {
+    max-width: 50%;
+  }
+  .textVather {
+    width: 50%;
+  }
+  .contenido {
+    width: 95%;
+    flex-direction: row;
+    align-items: center;
+  }
+  .botones {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .buttonGame {
+    height: 58%;
+  }
+  .buttonLogin {
+    order: 1;
+    height: auto;
+  }
+  .menuJuego {
+    width: auto;
+  }
+  .tr {
+    flex-direction: row;
+  }
+  .log {
+    width: 55%;
   }
 }
 
