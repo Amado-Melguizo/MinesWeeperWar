@@ -552,6 +552,9 @@ footer {
     display: flex;
     flex-direction: column;
   }
+  .textTrooper{
+    width:63%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
