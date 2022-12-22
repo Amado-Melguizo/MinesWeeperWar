@@ -1,0 +1,57 @@
+@media (max-width: 768px) {
+  footer {
+    height: 10%;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+  .griverious {
+    display: none;
+  }
+
+  .autor {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menuAutor {
+    flex-direction: column;
+  }
+
+  .textAutor1 {
+    width: 95%;
+  }
+
+  .textAutor2 {
+    width: 95%;
+  }
+
+  .imgTrooper {
+    max-width: 95%;
+  }
+  .menuForm {
+    flex-direction: row;
+    width: 65%;
+    height: 90%;
+  }
+  .trooper {
+    display: flex;
+    align-items: center;
+  }
+
+  table {
+    margin-top: 10px;
+  }
+
+  tr {
+    display: flex;
+    flex-direction: column;
+  }
+}
