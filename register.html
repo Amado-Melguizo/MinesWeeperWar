@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Minesweeper War</title>
-
+    <link
+      href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
     <!-- <link rel="stylesheet" type="text/css" href="css/estilo.css" /> -->
@@ -17,14 +20,17 @@
       <section></section>
     </nav>
     <div class="menuForm">
-      <div class="imgVather">
-        <img src="img/trooperlogin.jpg" alt="" />
+      <div class="trooper">
+        <div class="imgVather">
+          <img class="imgTrooper" src="img/trooperlogin.jpg" alt="" />
+        </div>
+        <div class="textTrooper">
+          <h3><u>Trooper</u></h3>
+          <h3>¡Ey! ¡soldado!</h3>
+          <h3>¡Unete a la alianza y ayúdanos junto al imperio!</h3>
+        </div>
       </div>
-      <div class="textTrooper">
-        <h3><u>Trooper</u></h3>
-        <h3>¡Ey! ¡soldado!</h3>
-        <h3>¡Unete a la alianza y ayúdanos junto al imperio!</h3>
-      </div>
+
       <form name="fvalida">
         <table class="tableForm">
           <tr>
@@ -44,12 +50,12 @@
           </tr>
           <th>
             <input
-                type="button"
-                type="submit"
-                text-align="center"
-                value="Enviar registro"
-                onclick="validarform()"
-              />
+              type="button"
+              type="submit"
+              text-align="center"
+              value="Enviar registro"
+              onclick="validarform()"
+            />
           </th>
           <th>
             ¿Te registrastes?
@@ -86,10 +92,41 @@
     </div>
 
     <footer>
-      <div class="menu-element">
-        Pagina diseñada por
-        <a href="autor.html" target="_blank">Amado Melguizo</a>
+      <ul class="social-icons">
+        <a
+          class="linkedin"
+          href="https://linkedin.com/in/amado-melguizo-martinez"
+          title="follow us on Linkedin"
+          ><i class="fa fa-linkedin"> Linkedin</i></a
+        >
+
+        <a
+          class="gmail"
+          href="mailto:amado.melgizo@gmail.com"
+          title="follow us on Gmail"
+          ><i class="fa fa-envelope"> Contacto</i></a
+        >
+      </ul>
+
+      <div>
+        Diseñada por
+        <a class="a" href="autor.html" target="_blank">Amado Melguizo</a>
       </div>
+      <ul class="social-icons">
+        <a
+          class="cv"
+          href="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/50b6e163-7048-4a11-be2d-a2cfc543a4c1?view=html"
+          title="follow us my CV/curriculum"
+          ><i class="fa fa-address-card"> Mi CV</i></a
+        >
+
+        <a
+          class="github"
+          href="https://github.com/Amado-Melguizo"
+          title="follow us on Github"
+          ><i class="fa fa-github"> Github</i></a
+        >
+      </ul>
     </footer>
   </body>
 </html>
