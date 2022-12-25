@@ -15,7 +15,7 @@ This is a proyect that I created during the second year of Daw to learn the dife
 
 ## Webpage
   - ¡advice! 
-  Its a static page in progress
+  It is a static page in progress
   - Navigate to https://amado-melguizo.github.io/MinesWeeperWar
 
 ## ApiPage
