@@ -11,7 +11,7 @@
 - [Files and folder](#files-and-folder)
 
 ## Get Started
-This is a Daw proyect that i created during the second year to learn the diferents lenguages of HTML ,CSS(Standart & flex), SCSS, JavaScript & JSON with apiRest.
+This is a proyect that I created during the second year of Daw to learn the diferents lenguages of HTML ,CSS(Standart & flex), SCSS, JavaScript & JSON with apiRest.
 
 ## Webpage
   - ¡advice! 
