@@ -5,51 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Minesweeper War</title>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" defer src="api/apiPost.js"></script>
 
     <!-- <link rel="stylesheet" type="text/css" href="css/estilo.css" /> -->
   </head>
 
   <body>
     <!-- cambiar a nav y sections -->
-    <nav class="sticky-menu">
-      <section></section>
-    </nav>
+    <nav></nav>
     <div class="menuForm">
-      <div class="imgVather">
-        <img src="img/trooperlogin.jpg" alt="" />
+      <div class="trooper">
+        <div class="imgVather">
+          <img class="imgTrooper" src="img/trooperlogin.jpg" alt="" />
+        </div>
+        <div class="textTrooper">
+          <h3><u>Trooper</u></h3>
+          <h3>¡Ey! ¡soldado!</h3>
+          <h3>¡Unete a la alianza y ayúdanos junto al imperio!</h3>
+        </div>
       </div>
-      <div class="textTrooper">
-        <h3><u>Trooper</u></h3>
-        <h3>¡Ey! ¡soldado!</h3>
-        <h3>¡Unete a la alianza y ayúdanos junto al imperio!</h3>
-      </div>
-      <form name="fvalida">
+
+      <form id="register" method="post">
         <table class="tableForm">
           <tr>
             <th colspan="2">Formulario de registro de escuadron.</th>
           </tr>
           <tr>
-            <th>Usuario:</th>
+            <th><label for="usuario"> Usuario </label></th>
             <td>
-              <input type="text" name="nombre" size="30" maxlength="20" />
+              <input type="text" name="usuario" id="usuario" required/>
             </td>
           </tr>
           <tr>
-            <th>Contraseña:</th>
+            <th><label for="password"> Contraseña: </label></th>
             <td>
-              <input type="password" name="pass" size="30" maxlength="20" />
+              <input type="password" name="password" id="password" required/>
             </td>
           </tr>
           <th>
             <input
-                type="button"
-                type="submit"
-                text-align="center"
-                value="Enviar registro"
-                onclick="validarform()"
-              />
+              type="submit"
+              text-align="center"
+              value="Enviar registro"
+            />
           </th>
           <th>
             ¿Te registrastes?
@@ -63,33 +63,46 @@
       </form>
 
       <script type="text/javascript">
-        function validarform() {
-          //valido el nombre
-          if (document.fvalida.nombre.value.length == "") {
-            alert("Introduzca su usuario.");
-            document.fvalida.nombre.focus();
-            return 0;
-          }
-
-          //valido la edad. tiene que ser entero mayor que 18
-          if (document.fvalida.pass.value == "") {
-            alert("Introduzca su contraeña.");
-            document.fvalida.nombre.focus();
-            return 0;
-          }
-
-          //el formulario se envia
-          alert("Muchas gracias por enviar el formulario");
-          document.fvalida.submit();
-        }
+        /*validar form*/
       </script>
     </div>
 
     <footer>
-      <div class="menu-element">
-        Pagina diseñada por
-        <a href="autor.html" target="_blank">Amado Melguizo</a>
+      <ul class="social-icons">
+        <a
+          class="linkedin"
+          href="https://linkedin.com/in/amado-melguizo-martinez"
+          title="follow us on Linkedin"
+          ><i class="fa fa-linkedin"> Linkedin</i></a
+        >
+
+        <a
+          class="gmail"
+          href="mailto:amado.melgizo@gmail.com"
+          title="follow us on Gmail"
+          ><i class="fa fa-envelope"> Contacto</i></a
+        >
+      </ul>
+
+      <div>
+        Diseñada por
+        <a class="a" href="autor.html" target="_blank">Amado Melguizo</a>
       </div>
+      <ul class="social-icons">
+        <a
+          class="cv"
+          href="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/50b6e163-7048-4a11-be2d-a2cfc543a4c1?view=html"
+          title="follow us my CV/curriculum"
+          ><i class="fa fa-address-card"> Mi CV</i></a
+        >
+
+        <a
+          class="github"
+          href="https://github.com/Amado-Melguizo"
+          title="follow us on Github"
+          ><i class="fa fa-github"> Github</i></a
+        >
+      </ul>
     </footer>
   </body>
 </html>
