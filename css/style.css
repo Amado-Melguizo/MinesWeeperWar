@@ -245,16 +245,6 @@ body {
     opacity: 1;
   }
 }
-.imgVather {
-  float: left;
-  margin: 20px auto;
-  margin-top: 20p;
-  margin-left: 20px;
-  margin-right: auto;
-  margin-bottom: auto;
-  z-index: auto;
-}
-
 .div-col {
   column-count: 2;
   display: flex;
@@ -471,6 +461,10 @@ footer {
   text-align: center;
 }
 
+.footerGame {
+  position: static;
+}
+
 .social-icons a {
   width: 150px;
   height: 45px;
@@ -517,6 +511,7 @@ footer {
   h3 {
     font-size: 15px;
   }
+  /*Pagina autor*/
   .griverious {
     display: none;
   }
@@ -533,13 +528,14 @@ footer {
   .textAutor2 {
     width: 95%;
   }
+  /*Pagina Login*/
   .imgTrooper {
     max-width: 95%;
   }
   .menuForm {
     flex-direction: row;
-    width: 65%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
   }
   .trooper {
     display: flex;
@@ -551,6 +547,52 @@ footer {
   tr {
     display: flex;
     flex-direction: column;
+  }
+  .textTrooper {
+    width: 63%;
+  }
+  /*Pagina juego*/
+  h2 {
+    font-size: 1em;
+  }
+  .imgVather {
+    max-width: 45%;
+  }
+  .textVather {
+    width: 50%;
+  }
+  .contenido {
+    width: 95%;
+    flex-direction: row;
+    align-items: center;
+  }
+  .botones {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .buttonGame {
+    height: 58%;
+  }
+  .buttonLogin {
+    order: 1;
+    height: auto;
+  }
+  .menuJuego {
+    width: 95%;
+  }
+  .div-col {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tr {
+    flex-direction: row;
+  }
+  .log {
+    order: 4;
+    width: 55%;
+  }
+  .tituloLog {
+    order: 2;
   }
 }
 
