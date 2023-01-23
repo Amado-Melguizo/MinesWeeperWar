@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tutorial API JavaScript</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" defer src="./apiGet.js"></script>
+    <script type="text/javascript" defer src="./apiPost.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+      }
+      .item {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center pt-5 pb-4">Lista de usuarios</h1>
+      <hr />
+      <div id="contenedor"></div>
+    </div>
+    <form action="" id="register" method="post">
+      <h1>Register</h1>
+      <p class="item">
+        <label for="usuario"> Usuario </label>
+        <input type="text" name="usuario" id="usuario" />
+      </p>
+      <p class="item">
+        <label for="password"> Password </label>
+        <input type="password" name="password" id="password" />
+      </p>
+      <p class="item">
+        <input type="submit" value="submit" />
+      </p>
+    </form>
+  </body>
+</html>
