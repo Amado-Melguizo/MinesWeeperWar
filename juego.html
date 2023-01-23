@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" defer src="api/apiGetBC.js"></script>
 
     <script src="app/juego.js" defer></script>
 
@@ -26,15 +27,14 @@
     <div class="menuJuego">
       <h2>¡¡DEFIENDE NUESTRA BASE!!</h2>
       <!-- Juego -->
-      <div class="div-col">
-        <h2 class="tituloTablero"><u>Tablero Juego</u></h2>
-        <h2 class="tituloLog"><u>Marcador</u></h2>
+      <div id="col" class="div-col">
+        <h2><u>Tablero Juego</u></h2>
+        <h2><u>Marcador</u></h2>
 
-        <div id="idTablero"></div>
+        <div class="tablero" id="idTablero"></div>
         <div class="log">
           <h3><u>Nombre del soldado:</u></h3>
-          <div class="cronometro">
-            <p>Amado</p>
+          <div id="card-user" class="cronometro">
           </div>
 
           <h3><u>Tiempo de juego</u></h3>
