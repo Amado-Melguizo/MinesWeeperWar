@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Minesweeper War</title>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script type="text/javascript" defer src="api/apiPost.js"></script>
 
@@ -13,18 +13,21 @@
   </head>
 
   <body>
-    <!-- cambiar a nav y sections-->
+    <!-- cambiar a nav y sections -->
     <nav></nav>
     <div class="menuForm">
-      <div class="imgVather">
-        <img src="img/trooperlogin.jpg" alt="" />
+      <div class="trooper">
+        <div class="imgVather">
+          <img class="imgTrooper" src="img/trooperlogin.jpg" alt="" />
+        </div>
+        <div class="textTrooper">
+          <h3><u>Trooper</u></h3>
+          <h3>¡Ey! ¡soldado!</h3>
+          <h3>¡Unete a la alianza y ayúdanos junto al imperio!</h3>
+        </div>
       </div>
-      <div class="textTrooper">
-        <h3><u>Trooper</u></h3>
-        <h3>¡Ey! ¡soldado!</h3>
-        <h3>¡Unete a la alianza y ayúdanos junto al imperio!</h3>
-      </div>
-      <form name="fvalida">
+
+      <form id="register" method="post">
         <table class="tableForm">
           <tr>
             <th colspan="2">Formulario de registro de escuadron.</th>
@@ -43,12 +46,10 @@
           </tr>
           <th>
             <input
-                type="button"
-                type="submit"
-                text-align="center"
-                value="Enviar registro"
-                onclick="validarform()"
-              />
+              type="submit"
+              text-align="center"
+              value="Enviar registro"
+            />
           </th>
           <th>
             ¿Te registrastes?
