@@ -528,7 +528,7 @@ footer {
   .textAutor2 {
     width: 95%;
   }
-  /*Pagina Login*/
+  /*Pagina Login & Register*/
   .imgTrooper {
     max-width: 95%;
   }
@@ -556,7 +556,7 @@ footer {
     font-size: 1em;
   }
   .imgVather {
-    max-width: 45%;
+    max-width: 50%;
   }
   .textVather {
     width: 50%;
@@ -578,21 +578,17 @@ footer {
     height: auto;
   }
   .menuJuego {
-    width: 95%;
-  }
-  .div-col {
-    flex-direction: column;
-    align-items: center;
+    width: auto;
   }
   .tr {
     flex-direction: row;
   }
   .log {
-    order: 4;
     width: 55%;
   }
-  .tituloLog {
-    order: 2;
+  /*Pagina Ranking*/
+  .memuRank {
+    display: flex;
   }
 }
 
